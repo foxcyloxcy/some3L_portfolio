@@ -47,15 +47,9 @@ mindmap
 
 ## 🚀 Demo
 
-Experience the live portfolio at [https://portfolio-lohit.vercel.app](https://portfolio-lohit.vercel.app)
+Experience the live portfolio at [some3L_portfolio](https://foxcyloxcy.github.io/some3L_portfolio/)
 
 ## 🛠️ Installation
-
-1️⃣ Clone the repository:
-
-```bash
-git clone https://github.com/lohitkolluri/Portfolio-Website
-```
 
 2️⃣ Navigate to project directory:
 
@@ -73,6 +67,11 @@ npm install
 
 ```bash
 npm run dev
+```
+
+4️⃣ Deploy to gh-pages:
+```
+npm run deploy
 ```
 
 5️⃣ Open in browser:
@@ -130,7 +129,7 @@ npm run dev
 
 <div align="center">
 
-MIT License © [Lohit Kolluri](LICENSE)
+<!-- MIT License © [Lohit Kolluri](LICENSE) -->
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
 
