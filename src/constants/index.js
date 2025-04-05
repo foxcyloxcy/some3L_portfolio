@@ -14,7 +14,6 @@ import {
   weatherpedia,
   termpw,
   payloadmaster,
-  threejs,
   mhft,
   sketcher,
   mathwork,
@@ -51,7 +50,6 @@ export const technologies = [
   { name: "Rect JS", icon: reactjs },
   { name: "Tailwind CSS", icon: tailwind },
   { name: "Node JS", icon: nodejs },
-  { name: "Three JS", icon: threejs },
   { name: "git", icon: git },
 ];
 
