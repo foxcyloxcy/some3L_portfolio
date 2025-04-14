@@ -37,10 +37,10 @@ export const navLinks = [
 ];
 
 export const services = [
-  { title: "C", icon: c },
-  { title: "C++", icon: cpp },
-  { title: "Python", icon: python },
-  { title: "Java", icon: java },
+  { title: "HTML", icon: html },
+  { title: "CSS", icon: css },
+  { title: "JavaScript", icon: javascript },
+  { title: "React JS", icon: reactjs },
 ];
 
 export const technologies = [
