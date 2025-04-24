@@ -115,7 +115,7 @@ const Contact = () => {
           {nameError && <span className="text-red-500">{nameError}</span>}
 
           <InputField
-            label="Email Address"
+            label="Your Email"
             name="email"
             value={form.email}
             onChange={handleChange}
