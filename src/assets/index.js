@@ -1,7 +1,7 @@
 // Import company logos
-import mathwork from "./company/mathwork.png";
-import edunet from "./company/edunet.png";
-import eduskill from "./company/eduskill.png";
+import gcm3 from "./company/gcm3_logo.png";
+import reloved from "./company/reloved_logo.png";
+import tsukiden from "./company/tsukiden_logo.png";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
@@ -33,8 +33,6 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 export {
-  mathwork,
-  edunet,
   python,
   c,
   cpp,
@@ -56,5 +54,7 @@ export {
   logo,
   menu,
   close,
-  eduskill,
+  gcm3,
+  tsukiden,
+  reloved
 };
