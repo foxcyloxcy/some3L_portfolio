@@ -61,8 +61,8 @@ export const experiences = [
     iconBg: "#161329",
     date: "Sep 2020 - Apr 2022",
     points: [
-      "Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.",
-      "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
+      "Acquired hands-on knowledge of Zendesk, Zendesk API, Zendesk sunshine, React.js and agile methodology.",
+      "Gain a solid foundation in client interactions, including understanding client needs, managing expectations, providing tailored solutions, and maintaining strong client relationships.",
     ],
   },
   {
