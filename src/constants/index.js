@@ -72,9 +72,8 @@ export const experiences = [
     iconBg: "#161329",
     date: "Mar 2022 - May 2024",
     points: [
-      "Completed virtual internship, gaining a strong foundation in MATLAB, including data analysis and processing.",
-      "Acquired practical skills in image and signal processing, including segmentation, batch processing, and spectral analysis.",
-      "Developed expertise in machine learning models for clustering, classification, and regression, and customized deep learning techniques for image classification.",
+      "Primarily contributed to projects using the MEVN (MySQL, Express, Vue.js, Node.js) stack, successfully delivering a project end-to-end from initial development to deployment.",
+      "Gained experience in building projects from scratch to deployment, including developing features such as playing call recordings using symlinks, creating a contact center application integrated with Genesys Cloud, and building online survey tools.",
     ],
   },
   {
