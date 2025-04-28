@@ -10,15 +10,15 @@ import {
   tailwind,
   nodejs,
   git,
-  edunet,
   weatherpedia,
   termpw,
   payloadmaster,
   mhft,
   sketcher,
-  mathwork,
   CompileVortex,
-  eduskill,
+  gcm3,
+  tsukiden,
+  reloved
 } from "../assets";
 
 export const navLinks = [
@@ -57,7 +57,7 @@ export const experiences = [
   {
     title: "Design Engineer",
     company_name: "Tsukiden Global Solutions Inc.",
-    icon: eduskill,
+    icon: tsukiden,
     iconBg: "#161329",
     date: "Sep 2020 - Apr 2022",
     points: [
@@ -68,7 +68,7 @@ export const experiences = [
   {
     title: "Full Stack Web Developer",
     company_name: "GCM3 Inc.",
-    icon: mathwork,
+    icon: gcm3,
     iconBg: "#161329",
     date: "Mar 2022 - May 2024",
     points: [
@@ -80,7 +80,7 @@ export const experiences = [
   {
     title: "Full Stack Web Developer",
     company_name: "Reloved UAE",
-    icon: edunet,
+    icon: reloved,
     iconBg: "#161329",
     date: "July 2024 - Present",
     points: [
