@@ -72,7 +72,7 @@ export const experiences = [
     iconBg: "#161329",
     date: "Mar 2022 - May 2024",
     points: [
-      "Primarily contributed to projects using the MEVN (MySQL, Express, Vue.js, Node.js) stack, successfully delivering a project end-to-end from initial development to deployment.",
+      "Engaged in full-stack development using the MEVN (MySQL, Express, Vue.js, Node.js) stack, successfully delivering end-to-end solutions from initial design and development through to deployment.",
       "Gained experience in building projects from scratch to deployment, including developing features such as playing call recordings using symlinks, creating a contact center application integrated with Genesys Cloud, and building online survey tools.",
     ],
   },
