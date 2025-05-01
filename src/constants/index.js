@@ -83,9 +83,10 @@ export const experiences = [
     iconBg: "#161329",
     date: "July 2024 - Present",
     points: [
-      "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
-      "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
-      "Leveraged 12 regression algorithms to attain precise outcomes in analyzing and predicting mental fitness levels across 150+ countries.",
+      "Leading team management activities, ensuring timely coordination, task allocation, and weekly delivery of project outputs to clients.",
+      "Developing and maintaining e-commerce web applications using React.js, PHP (Laravel), and MySQL.",
+      "Utilizing AWS services, including Lightsail and Amplify, for scalable deployment and hosting.",
+      "Implementing DevOps practices and managing CI/CD pipelines aligned with client-defined timelines, budgets, and feature requirements."
     ],
   },
 ];
