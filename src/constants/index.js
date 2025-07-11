@@ -58,8 +58,8 @@ export const experiences = [
     title: "Design Engineer",
     company_name: "Tsukiden Global Solutions Inc.",
     icon: tsukiden,
-    iconBg: "#161329",
-    date: "Sep 2020 - Apr 2022",
+    iconBg: "#B2B2AF",
+    date: "Sep 2021 - Apr 2022",
     points: [
       "Acquired hands-on knowledge of Zendesk, Zendesk API, Zendesk sunshine, React.js and agile methodology.",
       "Gain a solid foundation in client interactions, including understanding client needs, managing expectations, providing tailored solutions, and maintaining strong client relationships.",
@@ -69,8 +69,8 @@ export const experiences = [
     title: "Full Stack Web Developer",
     company_name: "GCM3 Inc.",
     icon: gcm3,
-    iconBg: "#161329",
-    date: "Mar 2022 - May 2024",
+    iconBg: "#B2B2AF",
+    date: "Apr 2022 - May 2024",
     points: [
       "Engaged in full-stack development using the MEVN (MySQL, Express, Vue.js, Node.js) stack, successfully delivering end-to-end solutions from initial design and development through to deployment.",
       "Gained experience in building projects from scratch to deployment, including developing features such as playing call recordings using symlinks, creating a contact center application integrated with Genesys Cloud, and building online survey tools.",
@@ -80,7 +80,7 @@ export const experiences = [
     title: "Full Stack Web Developer",
     company_name: "Reloved UAE",
     icon: reloved,
-    iconBg: "#161329",
+    iconBg: "#B2B2AF",
     date: "July 2024 - Present",
     points: [
       "Leading team management activities, ensuring timely coordination, task allocation, and weekly delivery of project outputs to clients.",
