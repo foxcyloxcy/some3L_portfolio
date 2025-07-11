@@ -18,7 +18,13 @@ import {
   CompileVortex,
   gcm3,
   tsukiden,
-  reloved
+  reloved,
+  vuejs,
+  nuxtjs,
+  mongoDB,
+  nextjs,
+  mysql,
+  aws
 } from "../assets";
 
 export const navLinks = [
@@ -41,6 +47,12 @@ export const services = [
   { title: "CSS", icon: css },
   { title: "JavaScript", icon: javascript },
   { title: "React JS", icon: reactjs },
+  { title: "Vue JS", icon: vuejs },
+  { title: "MongoDB", icon: mongoDB },
+  { title: "MySQL", icon: mysql },
+  { title: "Next JS", icon: nextjs },
+  { title: "Nuxt JS", icon: nuxtjs },
+  { title: "Amazon", icon: aws },
 ];
 
 export const technologies = [
@@ -51,6 +63,12 @@ export const technologies = [
   { name: "Tailwind CSS", icon: tailwind },
   { name: "Node JS", icon: nodejs },
   { name: "git", icon: git },
+  { title: "Vue JS", icon: vuejs },
+  { title: "MongoDB", icon: mongoDB },
+  { title: "MySQL", icon: mysql },
+  { title: "Next JS", icon: nextjs },
+  { title: "Nuxt JS", icon: nuxtjs },
+  { title: "Amazon", icon: aws },
 ];
 
 export const experiences = [
