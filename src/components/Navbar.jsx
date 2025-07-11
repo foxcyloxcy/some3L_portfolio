@@ -61,7 +61,7 @@ const Navbar = () => {
               window.scrollTo(0, 0);
             }}
           >
-            <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+            <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
             <p className="text-white text-[20px] font-bold cursor-pointer flex">
               LUCKY&nbsp;
               <span className="sm:block hidden">LLEMOS</span>
