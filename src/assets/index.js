@@ -25,6 +25,12 @@ import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
+import vuejs from "./tech/vuejs.png";
+import mongoDB from "./tech/mongoDB.png";
+import mysql from "./tech/mysql.png";
+import nextjs from "./tech/nextjs.svg";
+import nuxtjs from "./tech/nuxtjs.svg";
+import aws from "./tech/aws.png";
 
 // Import common assets
 import logo from "./logo.png";
@@ -56,5 +62,11 @@ export {
   close,
   gcm3,
   tsukiden,
-  reloved
+  reloved,
+  vuejs,
+  mongoDB,
+  nextjs,
+  nuxtjs,
+  mysql,
+  aws
 };
