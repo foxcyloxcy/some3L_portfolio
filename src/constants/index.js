@@ -10,12 +10,6 @@ import {
   tailwind,
   nodejs,
   git,
-  weatherpedia,
-  termpw,
-  payloadmaster,
-  mhft,
-  sketcher,
-  CompileVortex,
   gcm3,
   tsukiden,
   reloved,
@@ -24,7 +18,8 @@ import {
   mongoDB,
   nextjs,
   mysql,
-  aws
+  aws,
+  mclaudTechnology
 } from "../assets";
 
 export const navLinks = [
@@ -111,7 +106,7 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "WeatherPedia",
+    name: "Mclaud Technology",
     description:
       "Web-based platform that allows users to access weather information for their location by entering it in the search field",
     tags: [
@@ -120,7 +115,7 @@ export const projects = [
       { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
       { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
     ],
-    image: weatherpedia,
+    image: mclaudTechnology,
     source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
   },
   {
@@ -132,7 +127,7 @@ export const projects = [
       { name: "css", color: "green-text-gradient" },
       { name: "Javascript", color: "pink-text-gradient" },
     ],
-    image: termpw,
+    // image: termpw,
     source_code_link: "https://github.com/lohitkolluri/lohitkolluri.github.io",
   },
   {
@@ -144,7 +139,7 @@ export const projects = [
       { name: "Jupyter Notebook", color: "green-text-gradient" },
       { name: "Regression Algorithms", color: "pink-text-gradient" },
     ],
-    image: mhft,
+    // image: mhft,
     source_code_link:
       "https://github.com/lohitkolluri/mental_health_fitness_tracker",
   },
@@ -155,7 +150,7 @@ export const projects = [
     tags: [
       { name: "shell", color: "blue-text-gradient" },
     ],
-    image: payloadmaster,
+    // image: payloadmaster,
     source_code_link: "https://github.com/lohitkolluri/PayloadMaster",
   },
   {
@@ -167,7 +162,7 @@ export const projects = [
       { name: "CSS", color: "green-text-gradient" },
       { name: "HTML", color: "pink-text-gradient" },
     ],
-    image: CompileVortex,
+    // image: CompileVortex,
     source_code_link: "https://github.com/lohitkolluri/CompileVortex",
   },
   {
@@ -180,7 +175,7 @@ export const projects = [
       { name: "Python", color: "pink-text-gradient" },
     ],
 
-    image: sketcher,
+    // image: sketcher,
     source_code_link: "https://github.com/lohitkolluri/Image_to_Pencil_Sketch_App",
   },
 ];
