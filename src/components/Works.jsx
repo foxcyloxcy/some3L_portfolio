@@ -25,7 +25,7 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
           <img
             src={image}
             alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-scale-down rounded-2xl"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
@@ -60,8 +60,8 @@ const Works = () => {
       </motion.div>
       <div className="w-full flex">
         <motion.p variants={fadeIn("", "", 0.1)} className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects showcase my skills and experience through examples
-          of my work. Each project is briefly described with links to live web app.
+          Following projects showcase my skills and experience, through examples
+          of my work. Each project is briefly described with links to live web app when you click the image.
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
