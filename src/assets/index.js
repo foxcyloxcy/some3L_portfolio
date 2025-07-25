@@ -2,6 +2,7 @@
 import gcm3 from "./company/gcm3_logo.png";
 import reloved from "./company/reloved_logo.png";
 import tsukiden from "./company/tsukiden_logo.png";
+import mclaudTechnologyCompany from './company/mclaud_technology.png'
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
@@ -58,5 +59,6 @@ export {
   nuxtjs,
   mysql,
   aws,
-  mclaudTechnology
+  mclaudTechnology,
+  mclaudTechnologyCompany
 };
