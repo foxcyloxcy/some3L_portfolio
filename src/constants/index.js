@@ -19,7 +19,8 @@ import {
   nextjs,
   mysql,
   aws,
-  mclaudTechnology
+  mclaudTechnology,
+  mclaudTechnologyCompany
 } from "../assets";
 
 export const navLinks = [
@@ -67,6 +68,17 @@ export const technologies = [
 ];
 
 export const experiences = [
+    {
+    title: "Shopify Developer",
+    company_name: " Mclaud Technology",
+    icon: mclaudTechnologyCompany,
+    iconBg: "#B2B2AF",
+    date: "Jun 2021 - Sep 2021",
+    points: [
+      "Maintained responsive product and content pages to align with client branding.",
+      "Customized Shopify themes using Liquid, HTML/CSS, and JavaScript.",
+    ],
+  },
   {
     title: "Design Engineer",
     company_name: "Tsukiden Global Solutions Inc.",
@@ -116,7 +128,7 @@ export const projects = [
       { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
     ],
     image: mclaudTechnology,
-    source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
+    source_code_link: "https://mclaud.technology/",
   },
   {
     name: "Terminal Like Portfolio Website",
