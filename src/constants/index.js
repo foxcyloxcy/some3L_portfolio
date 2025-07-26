@@ -1,8 +1,4 @@
 import {
-  c,
-  python,
-  java,
-  cpp,
   javascript,
   html,
   css,
@@ -24,7 +20,11 @@ import {
   reloved,
   talentSage,
   callRecordings,
-  toDo
+  toDo,
+  webDevelopment,
+  appDevelopment,
+  webMaintenance,
+  softwareTesting
 } from "../assets";
 
 export const navLinks = [
@@ -43,16 +43,10 @@ export const navLinks = [
 ];
 
 export const services = [
-  { title: "HTML", icon: html },
-  { title: "CSS", icon: css },
-  { title: "JavaScript", icon: javascript },
-  { title: "React JS", icon: reactjs },
-  { title: "Vue JS", icon: vuejs },
-  { title: "MongoDB", icon: mongoDB },
-  { title: "MySQL", icon: mysql },
-  { title: "Next JS", icon: nextjs },
-  { title: "Nuxt JS", icon: nuxtjs },
-  { title: "Amazon", icon: aws },
+  { title: "Web Development", icon: webDevelopment },
+  { title: "App Development", icon: appDevelopment },
+  { title: "Web Maintenance", icon: webMaintenance },
+  { title: "Software Testing", icon: softwareTesting },
 ];
 
 export const technologies = [
@@ -63,12 +57,12 @@ export const technologies = [
   { name: "Tailwind CSS", icon: tailwind },
   { name: "Node JS", icon: nodejs },
   { name: "git", icon: git },
-  { title: "Vue JS", icon: vuejs },
-  { title: "MongoDB", icon: mongoDB },
-  { title: "MySQL", icon: mysql },
-  { title: "Next JS", icon: nextjs },
-  { title: "Nuxt JS", icon: nuxtjs },
-  { title: "Amazon", icon: aws },
+  { name: "Vue JS", icon: vuejs },
+  { name: "MongoDB", icon: mongoDB },
+  { name: "MySQL", icon: mysql },
+  { name: "Next JS", icon: nextjs },
+  { name: "Nuxt JS", icon: nuxtjs },
+  { name: "Amazon", icon: aws },
 ];
 
 export const experiences = [
