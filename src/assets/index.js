@@ -1,6 +1,6 @@
 // Import company logos
 import gcm3 from "./company/gcm3_logo.png";
-import reloved from "./company/reloved_logo.png";
+import relovedCompany from "./company/reloved_logo.png";
 import tsukiden from "./company/tsukiden_logo.png";
 import mclaudTechnologyCompany from './company/mclaud_technology.png'
 
@@ -12,6 +12,10 @@ import java from "./tech-stack/java.png";
 
 // Import project images
 import mclaudTechnology from './projects/mclaud_technology.png'
+import talentSage from './projects/talentsage.png'
+import reloved from './projects/reloved.png'
+import toDo from './projects/to-do.png'
+import callRecordings from './projects/call-recording.png'
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -52,7 +56,7 @@ export {
   close,
   gcm3,
   tsukiden,
-  reloved,
+  relovedCompany,
   vuejs,
   mongoDB,
   nextjs,
@@ -60,5 +64,9 @@ export {
   mysql,
   aws,
   mclaudTechnology,
-  mclaudTechnologyCompany
+  mclaudTechnologyCompany,
+  talentSage,
+  reloved,
+  toDo,
+  callRecordings
 };
