@@ -43,7 +43,7 @@ const About = () => {
         I am a Full Stack Developer with a strong ability to work across diverse web development stacks. My passion for versatility drives me to continuously explore and adapt to new technologies rather than limiting myself to a single stack. In addition to my development work, I have experience leading small teams, ensuring effective collaboration and successful project delivery. Currently, I am expanding my expertise in DevOps engineering, mobile development, and artificial intelligence to broaden my capabilities and stay aligned with industry trends.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap justify-center gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
