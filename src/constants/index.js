@@ -22,7 +22,9 @@ import {
   mclaudTechnology,
   mclaudTechnologyCompany,
   reloved,
-  talentSage
+  talentSage,
+  callRecordings,
+  toDo
 } from "../assets";
 
 export const navLinks = [
@@ -158,5 +160,33 @@ export const projects = [
     image: reloved,
     source_code_link:
       "https://www.therelovedmarketplace.com/",
+  },
+  {
+    name: "Play Audio Recording",
+    description:
+      "This application can search records in database using multiple input filters then displays table and can play audio recordings using symlinks and also showcases CRUD functionality in User Management component.",
+    tags: [
+      { name: "CRUD", color: "pink-text-gradient" },
+      { name: "MEVN", color: "blue-text-gradient" },
+      { name: "DevOps", color: "blue-text-gradient" },
+      { name: "Vuetify", color: "pink-text-gradient" },
+    ],
+    image: callRecordings,
+    source_code_link:
+      "https://foxcyloxcy.github.io/audio-recording/",
+  },
+  {
+    name: "To-Do list",
+    description:
+      "This to-do list is for you to list action items you will actually do. You can cross out the action item after you are done, or you can delete it if you don't need it in your list anymore.",
+    tags: [
+      { name: "HTML", color: "pink-text-gradient" },
+      { name: "CSS", color: "blue-text-gradient" },
+      { name: "JavaScript", color: "blue-text-gradient" },
+      { name: "Animation", color: "pink-text-gradient" },
+    ],
+    image: toDo,
+    source_code_link:
+      "https://foxcyloxcy.github.io/Sticky-Notes/",
   },
 ];
