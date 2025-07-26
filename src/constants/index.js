@@ -70,26 +70,17 @@ export const technologies = [
 ];
 
 export const experiences = [
-    {
-    title: "Shopify Developer",
-    company_name: " Mclaud Technology",
-    icon: mclaudTechnologyCompany,
-    iconBg: "#B2B2AF",
-    date: "Jun 2021 - Sep 2021",
-    points: [
-      "Maintained responsive product and content pages to align with client branding.",
-      "Customized Shopify themes using Liquid, HTML/CSS, and JavaScript.",
-    ],
-  },
   {
-    title: "Design Engineer",
-    company_name: "Tsukiden Global Solutions Inc.",
-    icon: tsukiden,
+    title: "Full Stack Web Developer",
+    company_name: "Reloved UAE",
+    icon: relovedCompany,
     iconBg: "#B2B2AF",
-    date: "Sep 2021 - Apr 2022",
+    date: "July 2024 - Present",
     points: [
-      "Acquired hands-on knowledge of Zendesk, Zendesk API, Zendesk sunshine, React.js and agile methodology.",
-      "Gain a solid foundation in client interactions, including understanding client needs, managing expectations, providing tailored solutions, and maintaining strong client relationships.",
+      "Leading team management activities, ensuring timely coordination, task allocation, and weekly delivery of project outputs to clients.",
+      "Developing and maintaining e-commerce web applications using React.js, PHP (Laravel), and MySQL.",
+      "Utilizing AWS services, including Lightsail and Amplify, for scalable deployment and hosting.",
+      "Implementing DevOps practices and managing CI/CD pipelines aligned with client-defined timelines, budgets, and feature requirements."
     ],
   },
   {
@@ -104,16 +95,25 @@ export const experiences = [
     ],
   },
   {
-    title: "Full Stack Web Developer",
-    company_name: "Reloved UAE",
-    icon: relovedCompany,
+    title: "Design Engineer",
+    company_name: "Tsukiden Global Solutions Inc.",
+    icon: tsukiden,
     iconBg: "#B2B2AF",
-    date: "July 2024 - Present",
+    date: "Sep 2021 - Apr 2022",
     points: [
-      "Leading team management activities, ensuring timely coordination, task allocation, and weekly delivery of project outputs to clients.",
-      "Developing and maintaining e-commerce web applications using React.js, PHP (Laravel), and MySQL.",
-      "Utilizing AWS services, including Lightsail and Amplify, for scalable deployment and hosting.",
-      "Implementing DevOps practices and managing CI/CD pipelines aligned with client-defined timelines, budgets, and feature requirements."
+      "Acquired hands-on knowledge of Zendesk, Zendesk API, Zendesk sunshine, React.js and agile methodology.",
+      "Gain a solid foundation in client interactions, including understanding client needs, managing expectations, providing tailored solutions, and maintaining strong client relationships.",
+    ],
+  },
+  {
+    title: "Shopify Developer",
+    company_name: " Mclaud Technology",
+    icon: mclaudTechnologyCompany,
+    iconBg: "#B2B2AF",
+    date: "Jun 2021 - Sep 2021",
+    points: [
+      "Maintained responsive product and content pages to align with client branding.",
+      "Customized Shopify themes using Liquid, HTML/CSS, and JavaScript.",
     ],
   },
 ];
@@ -122,7 +122,7 @@ export const projects = [
   {
     name: "Mclaud Technology",
     description:
-      "Web-based platform that allows users to access weather information for their location by entering it in the search field",
+      "DTF printing company. Regularly innovate printing equipment technology. Owns one of the most outstanding brand. Monitoring websites inventory availability for printers, ink and papers.",
     tags: [
       { name: "JavaScript", color: "blue-text-gradient" },
       { name: "HTML", color: "green-text-gradient" },
@@ -136,12 +136,10 @@ export const projects = [
   {
     name: "TalentSage",
     description:
-      "A terminal themed portfolio website that allows users to type into the terminal and use commands like a real terminal.",
+      "A company based in UK that specializes in personality test surveys and reports. Built this complex web application from scratch, it allows users to have multiple roles, multiple organizations, create and manage surveys(sample surveys are: Big 5 Personality Test and 360 Personality Test ) and reports for the respective surveys.",
     tags: [
-      { name: "HTML", color: "blue-text-gradient" },
-      { name: "CSS", color: "green-text-gradient" },
+      { name: "Client-facing", color: "pink-text-gradient" },
       { name: "Vuetify", color: "pink-text-gradient" },
-      { name: "VueJS", color: "pink-text-gradient" },
       { name: "MEVN", color: "pink-text-gradient" },
     ],
     image: talentSage,
@@ -150,11 +148,12 @@ export const projects = [
   {
     name: "The Reloved Marketplace",
     description:
-      "Reloved is the UAE’s first eco-tech platform where you can buy and sell secondhand fashion, furniture, luxury and baby & items.",
+      "Reloved is the UAE’s first eco-tech platform where you can buy and sell secondhand fashion, furniture, luxury and baby & items. Built from scratch, mobile responsive e-commerce Web-app.",
     tags: [
+      { name: "Client-facing", color: "pink-text-gradient" },
       { name: "ReactJS", color: "blue-text-gradient" },
-      { name: "AWS", color: "green-text-gradient" },
-      { name: "TailwindCSS", color: "pink-text-gradient" },
+      { name: "DevOps", color: "blue-text-gradient" },
+      { name: "MUI", color: "pink-text-gradient" },
     ],
     image: reloved,
     source_code_link:
