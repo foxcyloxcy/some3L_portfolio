@@ -20,7 +20,7 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className="relative w-full h-[230px] cursor-pointer bg-neutral-100"
+        <div className="relative w-full h-[230px] cursor-pointer bg-neutral-300"
           onClick={() => window.open(source_code_link, "_blank")}>
           <img
             src={image}
@@ -64,7 +64,7 @@ const Works = () => {
           of my work. Each project is briefly described with links to live web app when you click the image.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap justify-center gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} {...project} />
         ))}
