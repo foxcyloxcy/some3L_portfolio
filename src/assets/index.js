@@ -5,10 +5,10 @@ import tsukiden from "./company/tsukiden_logo.png";
 import mclaudTechnologyCompany from './company/mclaud_technology.png'
 
 // Import tech stack images
-import python from "./tech-stack/python.png";
-import c from "./tech-stack/c.png";
-import cpp from "./tech-stack/cpp.png";
-import java from "./tech-stack/java.png";
+import webDevelopment from './tech-stack/web-development.png'
+import appDevelopment from './tech-stack/app-development.png'
+import webMaintenance from './tech-stack/web-maintenance.png'
+import softwareTesting from './tech-stack/software-testing.png'
 
 // Import project images
 import mclaudTechnology from './projects/mclaud_technology.png'
@@ -39,10 +39,6 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 export {
-  python,
-  c,
-  cpp,
-  java,
   github,
   css,
   git,
@@ -68,5 +64,9 @@ export {
   talentSage,
   reloved,
   toDo,
-  callRecordings
+  callRecordings,
+  webDevelopment,
+  appDevelopment,
+  webMaintenance,
+  softwareTesting
 };
