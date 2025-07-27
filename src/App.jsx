@@ -4,6 +4,7 @@ import { About, Contact, Experience, Hero, Navbar, StarsCanvas, Tech, Works } fr
 
 const App = () => {
   return (
+    <>
     <BrowserRouter
       future={{
         v7_startTransition: true,
@@ -25,6 +26,7 @@ const App = () => {
         </div>
       </div>
     </BrowserRouter>
+    </>
   );
 };
 
