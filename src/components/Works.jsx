@@ -11,7 +11,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
 
   return (
-    <motion.div variants={fadeIn("up", "spring")}>
+    <motion.div variants={textVariant()}>
       <Tilt
         options={{
           max: 45,
@@ -31,7 +31,7 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
             <div
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
             >
-              <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" />
+              <img src={github} alt="live website" className="w-1/2 h-1/2 object-contain" />
             </div>
           </div>
         </div>
