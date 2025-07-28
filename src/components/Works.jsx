@@ -11,7 +11,6 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
 
   return (
-    <motion.div variants={textVariant()}>
       <Tilt
         options={{
           max: 45,
@@ -47,22 +46,21 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
           ))}
         </div>
       </Tilt>
-    </motion.div>
   );
 };
 
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
-      </motion.div>
+      </div>
       <div className="w-full flex">
-        <motion.p variants={fadeIn("", "", 0.1)} className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
           Following projects showcase my skills and experience, through examples
           of my work. Each project is briefly described with links to live web app when you click the image.
-        </motion.p>
+        </p>
       </div>
       <div className="mt-20 flex flex-wrap justify-center gap-7">
         {projects.map((project, index) => (
