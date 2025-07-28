@@ -15,16 +15,8 @@ import { useEffect, useState } from "react";
   
   
 const ExperienceCard = ({ experience }) => {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 0);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1170);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1170);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <VerticalTimelineElement
