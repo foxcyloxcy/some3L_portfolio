@@ -100,18 +100,18 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "Mclaud Technology",
+    name: "The Reloved Marketplace",
     description:
-      "DTF printing company. Regularly innovate printing equipment technology. Owns one of the most outstanding brand. Monitoring websites inventory availability for printers, ink and papers.",
+      "Reloved is the UAE’s first eco-tech platform where you can buy and sell secondhand fashion, furniture, luxury and baby & items. Built from scratch, mobile responsive e-commerce Web-app.",
     tags: [
-      { name: "JavaScript", color: "blue-text-gradient" },
-      { name: "HTML", color: "green-text-gradient" },
-      { name: "CSS", color: "green-text-gradient" },
-      { name: "Liquid", color: "pink-text-gradient" },
-      { name: "Shopify", color: "pink-text-gradient" },
+      { name: "Client-facing", color: "pink-text-gradient" },
+      { name: "ReactJS", color: "blue-text-gradient" },
+      { name: "DevOps", color: "blue-text-gradient" },
+      { name: "MUI", color: "pink-text-gradient" },
     ],
-    image: mclaudTechnology,
-    source_code_link: "https://mclaud.technology/",
+    image: reloved,
+    source_code_link:
+      "https://www.therelovedmarketplace.com/",
   },
   {
     name: "TalentSage",
@@ -126,18 +126,18 @@ export const projects = [
     source_code_link: "https://www.talentsage.com/",
   },
   {
-    name: "The Reloved Marketplace",
+    name: "Mclaud Technology",
     description:
-      "Reloved is the UAE’s first eco-tech platform where you can buy and sell secondhand fashion, furniture, luxury and baby & items. Built from scratch, mobile responsive e-commerce Web-app.",
+      "DTF printing company. Regularly innovate printing equipment technology. Owns one of the most outstanding brand. Monitoring websites inventory availability for printers, ink and papers.",
     tags: [
-      { name: "Client-facing", color: "pink-text-gradient" },
-      { name: "ReactJS", color: "blue-text-gradient" },
-      { name: "DevOps", color: "blue-text-gradient" },
-      { name: "MUI", color: "pink-text-gradient" },
+      { name: "JavaScript", color: "blue-text-gradient" },
+      { name: "HTML", color: "green-text-gradient" },
+      { name: "CSS", color: "green-text-gradient" },
+      { name: "Liquid", color: "pink-text-gradient" },
+      { name: "Shopify", color: "pink-text-gradient" },
     ],
-    image: reloved,
-    source_code_link:
-      "https://www.therelovedmarketplace.com/",
+    image: mclaudTechnology,
+    source_code_link: "https://mclaud.technology/",
   },
   {
     name: "Play Audio Recording",
