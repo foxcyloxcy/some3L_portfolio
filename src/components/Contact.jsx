@@ -7,6 +7,7 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import "../index.css";
 
 const InputField = ({ label, value, onChange, placeholder, name, type }) => (
@@ -138,7 +139,6 @@ const Contact = () => {
             display:'flex',
             alignItems: 'center',
             justifyContent: 'space-between'
-
           }}>
                 <button
                   type="submit"
@@ -147,11 +147,23 @@ const Contact = () => {
                   {loading ? "Sending..." : "Send"}
                 </button>
 
-
+              <div style={{
+                  margin: '10px',
+                  minWidth: '70px',
+                  display:'flex',
+                  justifyContent: 'space-between'
+                }}>
                   <a href="https://www.linkedin.com/in/lucky-llemos-866286200/" class="social-icon si-rounded si-small si-linkedin" target="_blank">
-                  <FaLinkedin size={30}  />
-              </a>
+                      <FaLinkedin size={30} margin={10}/>
+                  </a>
+
+                  <a href="https://github.com/foxcyloxcy" class="social-icon si-rounded si-small si-github" target="_blank">
+                      <FaGithub size={30} margin={10}  />
+                  </a>
+              </div>
+
           </section>
+
           {confirmation && <p className="text-green-500">{confirmation}</p>}
         </form>
       </motion.div>
