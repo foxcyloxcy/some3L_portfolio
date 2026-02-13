@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { FaLinkedin } from 'react-icons/fa';
 import "../index.css";
 
 const InputField = ({ label, value, onChange, placeholder, name, type }) => (
@@ -132,13 +133,25 @@ const Contact = () => {
             placeholder="What you want to say...?"
             type="text"
           />
+          
+          <section style={{
+            display:'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between'
 
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+          }}>
+                <button
+                  type="submit"
+                  className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+                >
+                  {loading ? "Sending..." : "Send"}
+                </button>
+
+
+                  <a href="https://www.linkedin.com/in/lucky-llemos-866286200/" class="social-icon si-rounded si-small si-linkedin" target="_blank">
+                  <FaLinkedin size={30}  />
+              </a>
+          </section>
           {confirmation && <p className="text-green-500">{confirmation}</p>}
         </form>
       </motion.div>
