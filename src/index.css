@@ -20,28 +20,22 @@
 }
 
 .gradient {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #434343, #000000);
-  background: linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(120deg, #603A2D, #1B0100);
 }
 
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: linear-gradient(-90deg, #FEE09A 0%, rgba(138, 84, 56, 0) 100%);
 }
 
 .green-pink-gradient {
-  background: #00cea8;
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(90deg, #8A5438 0%, #FEE09A 100%);
 }
 
 .orange-text-gradient,
 .green-text-gradient,
 .blue-text-gradient,
 .pink-text-gradient {
-  background: linear-gradient(to top, #f12711, #f5af19);
+  background: linear-gradient(115deg, #FEE09A, #FEFFF1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -115,10 +109,10 @@
 }
 
 .input {
-  background: #333; /* Background color */
+  background: #603A2D;
   padding: 16px 24px;
-  color: #fff;
-  border: none;
+  color: #FEFFF1;
+  border: 1px solid #8A5438;
   border-radius: 8px;
   outline: none;
   font-weight: 600;
@@ -130,15 +124,54 @@
 }
 
 .submit-button {
-  background: #c0c0c0; /* Background color */
+  background: #FEE09A;
   padding: 12px 24px;
   border-radius: 16px;
   outline: none;
-  color: #fff;
+  color: #1B0100;
   font-weight: 600;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the button */
 }
 
 .confirmation {
   color: #00ff00;
+}
+
+
+/* Warm portfolio design tokens: sampled from the supplied five-color reference. */
+:root {
+  --color-ink: #1B0100;
+  --color-surface: #603A2D;
+  --color-surface-raised: #8A5438;
+  --color-accent: #FEE09A;
+  --color-cream: #FEFFF1;
+  --color-muted: #FEE09A;
+  --color-outline: rgba(254, 224, 154, 0.35);
+  --focus-ring: #FEE09A;
+}
+
+html { background: var(--color-ink); }
+body { background: var(--color-ink); color: var(--color-cream); }
+::selection { background: var(--color-accent); color: var(--color-ink); }
+
+/* Use a warm tone-on-tone hierarchy rather than coloring every section. */
+.bg-tertiary { border: 1px solid var(--color-outline); }
+.bg-tertiary:hover { border-color: rgba(254, 224, 154, 0.65); }
+.text-white { color: var(--color-cream); }
+
+/* Accessible, keyboard-visible focus states. */
+:where(a, button, input, textarea, select, [role="button"]):focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.input::placeholder { color: var(--color-accent); opacity: 0.78; }
+.input:focus-visible { border-color: var(--color-accent); }
+.submit-button { transition: background-color 160ms ease, transform 160ms ease; }
+.submit-button:hover { background: var(--color-cream); }
+.submit-button:active { transform: scale(0.98); }
+
+/* Existing project-card transitions remain intact; honor reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
