@@ -5,6 +5,8 @@
  const root=document.documentElement,reduce=matchMedia('(prefers-reduced-motion: reduce)');
  const query=new URLSearchParams(location.search).get('theme'),forced=['day','night'].includes(query)?query:null;
  const pill=document.getElementById('time-pill');
+ const astronomy=window.PortfolioMoon;
+ let moonData=astronomy?astronomy.phaseAt(new Date()):{illuminated:1,waxing:true,name:'Full Moon'};
  let mode=root.dataset.theme||'day',w=0,h=0,beans=[],stars=[],clouds=[],raf=0,last=0,resizeTimer=0;
  const rand=(a,b)=>a+Math.random()*(b-a);
  function philippinesMode(){
@@ -12,12 +14,14 @@
    return hour>=6&&hour<18?'day':'night';
  }
  function updateTheme(){
+   if(astronomy)moonData=astronomy.phaseAt(new Date());
    const next=forced||philippinesMode(),changed=next!==mode;
    mode=next;root.dataset.theme=mode;
    document.querySelector('meta[name="theme-color"]').content=mode==='day'?'#FEFFF1':'#1B0100';
    if(pill){
      pill.querySelector('.time-icon').textContent=mode==='day'?'☀':'☾';
-     pill.querySelector('.time-copy').textContent=(forced?'Preview · ':'Manila · ')+(mode==='day'?'Daytime':'Nighttime');
+     pill.querySelector('.time-copy').textContent=(forced?'Preview · ':'Manila · ')+(mode==='day'?'Daytime':'Nighttime · '+moonData.name);
+     pill.title='Current moon: '+moonData.name+' · '+Math.round(moonData.illuminated*100)+'% illuminated (approximate)';
    }
    if(changed)reset();
  }
@@ -57,18 +61,40 @@
  }
  function moon(t){
    const r=Math.max(27,Math.min(58,w*.055)),x=w*.81,y=Math.max(115,h*.17)+Math.sin(t*.14)*3;
-   const glow=ctx.createRadialGradient(x,y,r*.5,x,y,r*2.7);
-   glow.addColorStop(0,'rgba(254,224,154,.17)');
-   glow.addColorStop(.6,'rgba(254,224,154,.06)');
+   const lit=moonData.illuminated,waxing=moonData.waxing,k=1-2*lit;
+   const power=.035+.16*lit;
+   const glow=ctx.createRadialGradient(x,y,r*.6,x,y,r*2.9);
+   glow.addColorStop(0,'rgba(254,224,154,'+power.toFixed(3)+')');
+   glow.addColorStop(.6,'rgba(254,224,154,'+(power*.25).toFixed(3)+')');
    glow.addColorStop(1,'rgba(254,224,154,0)');
-   ctx.fillStyle=glow;ctx.beginPath();ctx.arc(x,y,r*2.7,0,Math.PI*2);ctx.fill();
-   const light=ctx.createRadialGradient(x-r*.4,y-r*.4,1,x,y,r);
-   light.addColorStop(0,'#FEFFF1');light.addColorStop(.75,'#FEE09A');light.addColorStop(1,'#D8AB6A');
-   ctx.fillStyle=light;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();
-   ctx.fillStyle='rgba(138,84,56,.18)';
-   [[-.25,-.12,.15],[.32,.27,.19],[-.05,.39,.1]].forEach(a=>{
+   ctx.fillStyle=glow;ctx.beginPath();ctx.arc(x,y,r*2.9,0,Math.PI*2);ctx.fill();
+
+   // Earthshine: the unlit portion is faintly visible, even near new moon.
+   ctx.fillStyle='#382019';ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();
+   ctx.strokeStyle='rgba(254,224,154,.18)';ctx.lineWidth=.7;ctx.stroke();
+
+   // Lit lunar surface follows a curved terminator, not a static crescent icon.
+   // Waxing illuminates the right side in the Philippines; waning the left.
+   ctx.beginPath();
+   for(let dy=-r;dy<=r;dy+=1){
+     const edge=Math.sqrt(Math.max(0,r*r-dy*dy));
+     const lx=waxing?x+k*edge:x-edge;
+     if(dy===-r)ctx.moveTo(lx,y+dy);else ctx.lineTo(lx,y+dy);
+   }
+   for(let dy=r;dy>=-r;dy-=1){
+     const edge=Math.sqrt(Math.max(0,r*r-dy*dy));
+     ctx.lineTo(waxing?x+edge:x-k*edge,y+dy);
+   }
+   ctx.closePath();
+   ctx.save();ctx.clip();
+   const light=ctx.createRadialGradient(x-r*.4,y-r*.4,1,x,y,r*1.2);
+   light.addColorStop(0,'#FEFFF1');light.addColorStop(.68,'#FEE09A');light.addColorStop(1,'#D8AB6A');
+   ctx.fillStyle=light;ctx.fillRect(x-r,y-r,r*2,r*2);
+   ctx.fillStyle='rgba(138,84,56,.23)';
+   [[-.25,-.12,.15],[.32,.27,.19],[-.05,.39,.1],[-.43,.36,.09],[.44,-.4,.08]].forEach(a=>{
      ctx.beginPath();ctx.arc(x+a[0]*r,y+a[1]*r,r*a[2],0,Math.PI*2);ctx.fill();
    });
+   ctx.restore();
  }
  function cloud(c,t){
    const wrap=w+c.width*2,x=((c.x+t*c.speed+c.width)%wrap)-c.width;
