@@ -1,3 +1,31 @@
+#running {
+  --running-orange: #fc4c02;
+  --running-link: #a13200;
+  --running-text: #251c18;
+  --running-muted: #624e45;
+  --running-surface: #fffaf7;
+  --running-feature: linear-gradient(135deg, #ffe2d3, #fff8f3 85%);
+  --running-line: #e5c3b1;
+}
+
+[data-theme="night"] #running {
+  --running-link: #ff9a71;
+  --running-text: #fff3ed;
+  --running-muted: #e4bcaa;
+  --running-surface: #2a1b17;
+  --running-feature: linear-gradient(135deg, #542518, #2b1b16 85%);
+  --running-line: #735044;
+}
+
+#running .section-title {
+  padding-inline-start: 15px;
+  border-inline-start: 5px solid var(--running-orange);
+}
+
+#running a:focus-visible {
+  outline-color: var(--running-link);
+}
+
 .running-results {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
@@ -8,8 +36,9 @@
 .running-personal-bests {
   min-width: 0;
   padding: clamp(18px, 3.5vw, 32px);
-  border: 1px solid var(--surface-outline);
+  border: 1px solid var(--running-line);
   border-radius: 21px;
+  color: var(--running-text);
 }
 
 .running-feature {
@@ -17,7 +46,8 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  background: var(--feature);
+  border-color: var(--running-orange);
+  background: var(--running-feature);
   box-shadow: 0 10px 35px var(--shadow);
 }
 
@@ -31,6 +61,7 @@
 
 .running-time {
   margin: 10px 0 6px;
+  color: var(--running-link);
   font-size: clamp(2.6rem, 8vw, 5.75rem);
   font-weight: 850;
   font-variant-numeric: tabular-nums;
@@ -40,11 +71,11 @@
 
 .running-meta {
   margin: 0 0 18px;
-  color: var(--muted);
+  color: var(--running-muted);
 }
 
 .running-personal-bests {
-  background: var(--bg);
+  background: var(--running-surface);
 }
 
 .running-bests-list {
@@ -59,7 +90,7 @@
   gap: 10px;
   align-items: center;
   padding: 10px 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--running-line);
 }
 
 .running-bests-list li:last-child {
@@ -70,7 +101,7 @@
 .running-bests-list time,
 .running-trophies small {
   display: block;
-  color: var(--muted);
+  color: var(--running-muted);
   font-size: .82rem;
 }
 
@@ -83,8 +114,14 @@
 
 .running-bests-list a,
 .running-feature .project-link {
+  color: var(--running-link);
   text-decoration: underline;
   text-underline-offset: .22em;
+}
+
+.running-bests-list a:hover,
+.running-feature .project-link:hover {
+  color: var(--running-text);
 }
 
 .running-trophy-title {
@@ -102,15 +139,36 @@
 
 .running-trophies li {
   padding: 14px 16px;
-  border: 1px solid var(--surface-outline);
-  border-top: 3px solid var(--accent);
+  border: 1px solid var(--running-line);
+  border-top: 3px solid var(--running-orange);
   border-radius: 12px;
-  background: var(--bg);
+  background: var(--running-surface);
+  color: var(--running-text);
   line-height: 1.45;
 }
 
 .running-trophies small {
   margin-top: 5px;
+}
+
+#running .button {
+  border-color: var(--running-orange);
+  background: var(--running-surface);
+  color: var(--running-link);
+}
+
+#running .button:hover {
+  background: var(--running-feature);
+  color: var(--running-text);
+}
+
+#running .button.primary {
+  background: var(--running-orange);
+  color: #210c04;
+}
+
+#running .button.primary:hover {
+  background: #ff7340;
 }
 
 @media (max-width: 700px) {
