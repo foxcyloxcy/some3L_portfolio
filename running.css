@@ -1,4 +1,4 @@
-:is(#running, .profile-highlight-running) {
+#running {
   --running-orange: #fc4c02;
   --running-link: #a13200;
   --running-text: #251c18;
@@ -8,7 +8,7 @@
   --running-line: #e5c3b1;
 }
 
-[data-theme="night"] :is(#running, .profile-highlight-running) {
+[data-theme="night"] #running {
   --running-link: #ff9a71;
   --running-text: #fff3ed;
   --running-muted: #e4bcaa;
