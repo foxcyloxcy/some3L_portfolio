@@ -1,31 +1,42 @@
 (()=>{
  'use strict';
  const canvas=document.getElementById('ambient'),ctx=canvas&&canvas.getContext('2d');
- if(!ctx)return;
  const root=document.documentElement,reduce=matchMedia('(prefers-reduced-motion: reduce)');
  const query=new URLSearchParams(location.search).get('theme'),forced=['day','night'].includes(query)?query:null;
  const pill=document.getElementById('time-pill');
+ const timeLabel=pill?.querySelector('time'),timeIcon=pill?.querySelector('.time-icon');
+ const timeZone='Asia/Manila';
+ const manilaHour=new Intl.DateTimeFormat('en-GB',{timeZone,hour:'2-digit',hourCycle:'h23'});
+ const manilaDate=new Intl.DateTimeFormat('en-US',{timeZone,month:'short',day:'numeric',year:'numeric'});
+ const manilaTime=new Intl.DateTimeFormat('en-US',{timeZone,hour:'numeric',minute:'2-digit',hour12:true});
  const astronomy=window.PortfolioMoon;
  let moonData=astronomy?astronomy.phaseAt(new Date()):{illuminated:1,waxing:true,name:'Full Moon'};
- let mode=root.dataset.theme||'day',w=0,h=0,beans=[],stars=[],clouds=[],raf=0,last=0,resizeTimer=0;
+ let mode=root.dataset.theme||'day',w=0,h=0,beans=[],stars=[],clouds=[],raf=0,last=0,resizeTimer=0,clockTimer;
  const rand=(a,b)=>a+Math.random()*(b-a);
- function philippinesMode(){
-   const hour=Number(new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Manila',hour:'2-digit',hourCycle:'h23'}).format(new Date()));
+ function philippinesMode(now){
+   const hour=Number(manilaHour.format(now));
    return hour>=6&&hour<18?'day':'night';
  }
- function updateTheme(){
-   if(astronomy)moonData=astronomy.phaseAt(new Date());
-   const next=forced||philippinesMode(),changed=next!==mode;
+ function updateTheme(now){
+   if(astronomy)moonData=astronomy.phaseAt(now);
+   const next=forced||philippinesMode(now),changed=next!==mode;
    mode=next;root.dataset.theme=mode;
    document.querySelector('meta[name="theme-color"]').content=mode==='day'?'#FEFFF1':'#1B0100';
-   if(pill){
-     pill.querySelector('.time-icon').textContent=mode==='day'?'☀':'☾';
-     pill.querySelector('.time-copy').textContent=(forced?'Preview · ':'Manila · ')+(mode==='day'?'Daytime':'Nighttime · '+moonData.name);
-     pill.title='Current moon: '+moonData.name+' · '+Math.round(moonData.illuminated*100)+'% illuminated (approximate)';
+   if(timeLabel&&timeIcon){
+     timeIcon.textContent=mode==='day'?'☀':'☾';
+     timeLabel.dateTime=now.toISOString();
+     timeLabel.textContent=manilaDate.format(now)+' · '+manilaTime.format(now);
+     pill.hidden=false;
    }
    if(changed)reset();
  }
+ function syncClock(){
+   clearTimeout(clockTimer);
+   updateTheme(new Date());
+   if(!document.hidden)clockTimer=setTimeout(syncClock,60000-Date.now()%60000);
+ }
  function reset(){
+   if(!ctx)return;
    cancelAnimationFrame(raf);
    w=innerWidth;h=innerHeight;
    const pixelRatio=Math.min(devicePixelRatio||1,2);
@@ -110,15 +121,22 @@
    raf=requestAnimationFrame(frame);
  }
  function begin(){
-   cancelAnimationFrame(raf);if(document.hidden)return;
+   cancelAnimationFrame(raf);if(!ctx||document.hidden)return;
    if(reduce.matches||(navigator.connection&&navigator.connection.saveData)){draw(performance.now());return;}
    last=0;raf=requestAnimationFrame(frame);
  }
  addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(reset,130);},{passive:true});
- document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else{updateTheme();begin();}});
- addEventListener('pageshow',()=>{updateTheme();begin();});
+ document.addEventListener('visibilitychange',()=>{
+   if(document.hidden){
+     clearTimeout(clockTimer);
+     cancelAnimationFrame(raf);
+   }else{
+     syncClock();
+     begin();
+   }
+ });
+ addEventListener('pageshow',()=>{syncClock();begin();});
  if(reduce.addEventListener)reduce.addEventListener('change',begin);
  else if(reduce.addListener)reduce.addListener(begin);
- setInterval(updateTheme,30000);
- updateTheme();reset();
+ syncClock();reset();
 })();
