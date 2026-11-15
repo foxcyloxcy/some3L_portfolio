@@ -27,7 +27,15 @@ header{position:sticky;z-index:20;background:var(--header);border-bottom:1px sol
 .navlinks a:hover,.project-link:hover{color:var(--text)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
 ::selection{background:var(--button);color:var(--button-text)}
-.time-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;margin-bottom:13px;border:1px solid var(--surface-outline);border-radius:999px;color:var(--muted);background:var(--surface);font-size:.75rem;font-weight:700;letter-spacing:.04em}
+.site-nav{display:grid;grid-template-columns:auto minmax(0,1fr) auto}
+.site-nav .navlinks{justify-content:flex-end}
+.time-pill{display:inline-flex;align-items:center;justify-self:end;gap:8px;padding:6px 12px;border:1px solid var(--surface-outline);border-radius:999px;color:var(--muted);background:var(--surface);font-size:.75rem;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
 .time-icon{font-size:1rem;line-height:1}
-@media(max-width:700px){header{background:var(--header)}.featured-project .project-card{background:var(--feature)}.time-pill{font-size:.69rem}}
+@media(max-width:760px){
+  .site-nav{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:5px 12px;padding:9px 0}
+  .site-nav .navlinks{grid-column:1/-1;grid-row:2;justify-content:flex-start;gap:3px 12px}
+  .site-nav .time-pill{grid-column:2;grid-row:1;padding:4px 8px;font-size:.7rem}
+}
+@media(max-width:360px){html{scroll-padding-top:116px}}
+@media(max-width:700px){header{background:var(--header)}.featured-project .project-card{background:var(--feature)}}
 @media(prefers-reduced-motion:reduce){body,header,.card,.item,.tag,.button{transition:none!important}}
